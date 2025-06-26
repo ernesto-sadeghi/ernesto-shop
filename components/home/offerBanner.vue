@@ -8,7 +8,7 @@
                     <p class="lead mb-0">Get 30% off on all sustainable products. Use code: <strong>GREEN30</strong></p>
                 </div>
                 <div class="col-md-4 text-md-end mt-3 mt-md-0">
-                    <a href="#" class="btn btn-dark btn-lg">Shop the Deal</a>
+                    <NuxtLink href="/products" class="btn btn-dark btn-lg">Shop the Deal</NuxtLink>
                 </div>
             </div>
         </div>

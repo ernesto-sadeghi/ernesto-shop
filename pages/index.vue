@@ -11,7 +11,7 @@
     <section class="container mb-5">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h2>Featured Eco Products</h2>
-            <a href="#" class="btn btn-outline-primary">View All</a>
+            <NuxtLink href="/products" class="btn btn-outline-primary">View All</NuxtLink>
         </div>
         <div class="row g-4">
             <HomeProduct v-for="product,index in featuredproducts" :key="index" :product="product"/>

@@ -16,9 +16,9 @@
                         <h2>Summer Collection</h2>
                         <p class="animate__animated animate__fadeInLeft animate__delay-1s">Discover our exclusive summer
                             lineup with 30% off for new customers</p>
-                        <a href="#"
+                        <NuxtLink href="/products"
                             class="btn btn-light shop-btn animate__animated animate__fadeInUp animate__delay-2s">SHOP
-                            NOW</a>
+                            NOW</NuxtLink>
                     </div>
                 </div>
 

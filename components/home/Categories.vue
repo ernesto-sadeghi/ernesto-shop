@@ -3,7 +3,7 @@
         <h2 class="text-center mb-5">Our Green Categories</h2>
         <div class="row g-4">
             <div class="col-md-4">
-                <a href="#" class="text-decoration-none">
+                <NuxtLink href="/products" class="text-decoration-none">
                     <div class="category-card">
                         <div class="category-icon">
                             <i class="bi bi-recycle"></i>
@@ -14,10 +14,10 @@
                             <p class="category-count mb-0">86 Products</p>
                         </div>
                     </div>
-                </a>
+                </NuxtLink>
             </div>
             <div class="col-md-4">
-                <a href="#" class="text-decoration-none">
+                <NuxtLink href="/products" class="text-decoration-none">
                     <div class="category-card">
                         <div class="category-icon">
                             <i class="bi bi-tree"></i>
@@ -28,10 +28,10 @@
                             <p class="category-count mb-0">112 Products</p>
                         </div>
                     </div>
-                </a>
+                </NuxtLink>
             </div>
             <div class="col-md-4">
-                <a href="#" class="text-decoration-none">
+                <NuxtLink href="/products" class="text-decoration-none">
                     <div class="category-card">
                         <div class="category-icon">
                             <i class="bi bi-droplet"></i>
@@ -42,10 +42,10 @@
                             <p class="category-count mb-0">64 Products</p>
                         </div>
                     </div>
-                </a>
+                </NuxtLink>
             </div>
             <div class="col-md-6">
-                <a href="#" class="text-decoration-none">
+                <NuxtLink href="/products" class="text-decoration-none">
                     <div class="category-card">
                         <div class="category-icon">
                             <i class="bi bi-house"></i>
@@ -56,10 +56,10 @@
                             <p class="category-count mb-0">78 Products</p>
                         </div>
                     </div>
-                </a>
+                </NuxtLink>
             </div>
             <div class="col-md-6">
-                <a href="#" class="text-decoration-none">
+                <NuxtLink href="/products" class="text-decoration-none">
                     <div class="category-card">
                         <div class="category-icon">
                             <i class="bi bi-bicycle"></i>
@@ -70,7 +70,7 @@
                             <p class="category-count mb-0">42 Products</p>
                         </div>
                     </div>
-                </a>
+                </NuxtLink>
             </div>
         </div>
     </section>

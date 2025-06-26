@@ -35,6 +35,5 @@
 <script setup>
 
 const {product} = defineProps({product:Object})
-console.log(product);
 
 </script>

@@ -29,31 +29,32 @@
             <div class="offcanvas-body h-100 d-flex flex-column flex-md-row">
               <ul class="navbar-nav ms-md-auto">
                 <li class="nav-item mx-2">
-                  <a class="nav-link px-3 py-2 position-relative" href="#">
+                  
+                  <NuxtLink class="nav-link px-3 py-2 position-relative" href="/">
                     <i class="bi bi-house-door me-1"></i> Home
                     <span class="nav-underline"></span>
-                  </a>
+                  </NuxtLink>
                 </li>
                 <li class="nav-item mx-2">
-                  <a class="nav-link px-3 py-2 position-relative" href="#">
+                  <NuxtLink  class="nav-link px-3 py-2 position-relative" href="/products">
                     <i class="bi bi-box-seam"></i> Products
                     <span class="nav-underline"></span>
-                  </a>
+                  </NuxtLink>
                 </li>
                 <li class="nav-item mx-2">
-                  <a class="nav-link px-3 py-2 position-relative" href="#">
+                  <NuxtLink class="nav-link px-3 py-2 position-relative" href="/cart">
                     <i class="bi bi-cart"></i> cart
                     <span class="nav-underline"></span>
-                  </a>
+                  </NuxtLink>
                 </li>
 
               </ul>
 
 
               <div class="ms-lg-4 mt-5 mt-lg-0 ">
-                <button class="btn btn-success px-4 py-2 rounded-pill shadow-lg hover-scale">
+                <NuxtLink href="/login" class="btn btn-success px-4 py-2 rounded-pill shadow-lg hover-scale">
                   <i class="bi bi-rocket me-1"></i> Log in
-                </button>
+                </NuxtLink>
               </div>
             </div>
           </div>
@@ -94,7 +95,7 @@
             <a href="#" class="btn btn-sm btn-outline-light btn-icon rounded-circle me-2">
               <i class="bi bi-twitter-x"></i>
             </a>
-            <a href="#" class="btn btn-sm btn-outline-light btn-icon rounded-circle me-2">
+            <a href="https://web.telegram.org/k/#@ErnestoSadeghi" class="btn btn-sm btn-outline-light btn-icon rounded-circle me-2">
               <i class="bi bi-telegram"></i>
             </a>
             <a href="#" class="btn btn-sm btn-outline-light btn-icon rounded-circle me-2">
@@ -103,6 +104,9 @@
 
             <a href="#" class="btn btn-sm btn-outline-light btn-icon rounded-circle me-2">
               <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://github.com/ernesto-sadeghi" class="btn btn-sm btn-outline-light btn-icon rounded-circle me-2">
+              <i class="bi bi-github"></i>
             </a>
 
           </div>
