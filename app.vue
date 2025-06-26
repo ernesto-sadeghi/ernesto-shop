@@ -11,3 +11,9 @@
 <script setup>
 
 </script>
+<style>
+body{
+overflow-y:scroll !important ;
+  padding-right: 0 !important;
+}
+</style>
