@@ -1,10 +1,31 @@
 <template>
-<h1>PRODUCTS page</h1>  
+  <div class="container-fluid px-5 my-5">
+    <div class="row g-5">
+
+      <Product v-for="product in products" :key="product.id" :product="product"></Product>
+    </div>
+  </div>
+  <Categories :categories="categories" />
 </template>
 
-<script>
+<script setup>
+const url = computed(() => `https://fakestoreapi.com/products`)
+
+const { data: products, pending, error, refresh } = await useAsyncData("products", () => $fetch(url.value),
+  {
+    initialCache: false,
+    watch: [url]
+  }
+)
+const url2 = computed(() => 'https://fakestoreapi.com/products/categories')
+
+const { data: categories, pending2, error2, refresh2 } = await useAsyncData("categories", () => $fetch(url2.value),
+  {
+    watch: [url]
+  }
+)
+
+
 </script>
 
-<style>
-
-</style>
+<style></style>

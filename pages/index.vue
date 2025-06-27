@@ -4,7 +4,7 @@
 <HomeSlider :sliderPics="sliderPics"></HomeSlider>
  
     <!--  Category Display -->
-  <HomeCategories></HomeCategories>
+  <Categories :categories="categories"></Categories>
     <!--  Offer Banner -->
  <HomeOfferBanner></HomeOfferBanner>
     <!-- Featured Products -->
@@ -14,7 +14,7 @@
             <NuxtLink href="/products" class="btn btn-outline-primary">View All</NuxtLink>
         </div>
         <div class="row g-4">
-            <HomeProduct v-for="product,index in featuredproducts" :key="index" :product="product"/>
+            <Product v-for="product,index in featuredproducts" :key="index" :product="product"/>
 
 
 
@@ -72,16 +72,25 @@ const sliderPics = ref([
 
 ])
 const featuredproducts = ref([
-    {title:"Bamboo Toothbrush Set",tag:"Eco",tagMode:'dark',price:18.99,off: 12.99,category:"Bamboo Series",rate:4.9},
-    {title:"Stainless Steel Bottle",tag:"New",tagMode:'primary',price:24.99,off:false,category:"Drinkware",rate:5},
-    {title:"Organic Soap Collection",tag:"Best Seller",tagMode:'success',price:18.99,off:false,category:"Personal Care",rate:4.8},
-    {title:"Hemp Tote Bag",tag:"Limited" ,tagMode:'warning',price:29.99,off:false,category:"Accessories",rate:4.7}
+    {id:55,image:`/img/hitler.jpg`,title:"Bamboo Toothbrush Set",tag:"Eco",tagMode:'dark',price:18.99,off: 12.99,category:"Bamboo Series",rating:{rate:4.9}},
+    {id:56,image:`/img/R.jpeg.jpg`,title:"Stainless Steel Bottle",tag:"New",tagMode:'primary',price:24.99,off:false,category:"Drinkware",rating:{rate:5}},
+    {id:57,image:`/img/g9.jpg`,title:"Organic Soap Collection",tag:"Best Seller",tagMode:'success',price:18.99,off:false,category:"Personal Care",rating:{rate:4.8}},
+    {id:58,image:`/img/m11.jpg`,title:"Hemp Tote Bag",tag:"Limited" ,tagMode:'warning',price:29.99,off:false,category:"Accessories",rating:{rate:4.7}}
 ])
 const comments = [
     {name:"vidal",comment:`"The organic cotton towels are the softest I've ever used. Worth every penny for both quality and eco-impact!""`,rate:4}
     ,{name:"kazemi",comment:`"I love shopping at Ernesto Shop! Their commitment to sustainability is genuine, and the product quality is exceptional."`,rate:4}
     ,{name:"sharifi",comment:`"The organic cotton towels are the softest I've ever used. Worth every penny for both quality and eco-impact!"`,rate:5}
     ]
+const url = computed(()=>'https://fakestoreapi.com/products/categories')
+
+const { data: categories, pending, error, refresh } = await useAsyncData( "categories", () => $fetch(url.value),
+  {
+    watch: [url] 
+  }
+)
+
+
 </script>
 
 <style >
