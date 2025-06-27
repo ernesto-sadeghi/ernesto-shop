@@ -1,6 +1,6 @@
 <template>
       <section class="category-section container-fluid">
-        <h2 class="text-center mb-5">Our Categories</h2>
+        <h2 class="text-center mb-5">Explore Our Categories</h2>
         <div class="row g-4">
             <div v-for="cat,index in categories" :key="index" :class="index ==3 ?'col-md-12':'col-md-4'">
                 <NuxtLink :href="'/products/categories-'+cat" class="text-decoration-none">

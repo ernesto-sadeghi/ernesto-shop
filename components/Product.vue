@@ -20,9 +20,9 @@
                                 <span class="text-dark fw-bold">${{product.price  }}</span>
                                 <span class="text-decoration-line-through text-muted small ms-2">{{product.off?`$ ${product.off}`:''  }}</span>
                             </div>
-                            <button class="btn btn-sm btn-outline-dark rounded-circle wishlist-btn">
+                            <!-- <button class="btn btn-sm btn-outline-dark rounded-circle wishlist-btn">
                                 <i class="bi bi-heart"></i>
-                            </button>
+                            </button> -->
                         </div>
                     </div>
                     <div class="card-footer bg-white border-0 pt-0">
