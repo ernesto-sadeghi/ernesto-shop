@@ -11,14 +11,12 @@
             <!-- Slides -->
             <div class="carousel-inner h-100">
 
-                <div v-for="pic,index in sliderPics" :key="index" class="carousel-item  h-100" :class="index ==0 ?'active':''" :style="{ backgroundImage: `url(${pic})` }">
+                <div v-for="pic,index in sliderPics" :key="index" class="carousel-item  h-100" :class="index ==0 ?'active':''" :style="{ backgroundImage: `url(${pic.src})` }">
                     <div class="carousel-caption animate__animated animate__fadeInLeft">
                         <h2>Summer Collection</h2>
-                        <p class="animate__animated animate__fadeInLeft animate__delay-1s">Discover our exclusive summer
-                            lineup with 30% off for new customers</p>
+                        <p class="animate__animated animate__fadeInLeft animate__delay-1s">{{ pic.desc }}</p>
                         <NuxtLink href="/products"
-                            class="btn btn-light shop-btn animate__animated animate__fadeInUp animate__delay-2s">SHOP
-                            NOW</NuxtLink>
+                            class="btn  shop-btn animate__animated animate__fadeInUp animate__delay-2s" :class='pic.btnType ' >{{ pic.btnTxt }}</NuxtLink>
                     </div>
                 </div>
 
@@ -26,26 +24,7 @@
 
 
 
-                <!-- <div class="carousel-item h-100" style="background-image: url('/img/g9.jpg');">
-                    <div class="carousel-caption animate__animated animate__fadeInRight">
-                        <h2>New Arrivals</h2>
-                        <p class="animate__animated animate__fadeInRight animate__delay-1s">Fresh styles for the season.
-                            Limited stock available.</p>
-                        <a href="#"
-                            class="btn btn-outline-light shop-btn animate__animated animate__fadeInUp animate__delay-2s">VIEW
-                            COLLECTION</a>
-                    </div>
-                </div> -->
-                <!-- <div class="carousel-item h-100" style="background-image: url('/img/2.jpg');">
-                    <div class="carousel-caption animate__animated animate__fadeInUp">
-                        <h2>Weekend Special</h2>
-                        <p class="animate__animated animate__fadeInUp animate__delay-1s">Free shipping on all orders
-                            this weekend only. Use code: WEEKEND23</p>
-                        <a href="#"
-                            class="btn btn-danger shop-btn animate__animated animate__fadeInUp animate__delay-2s">GET
-                            DEAL</a>
-                    </div>
-                </div> -->
+               
             </div>
 
             <!-- Controls -->

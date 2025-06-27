@@ -65,7 +65,12 @@
 
 <script setup>
 
-const sliderPics = ref(['/img/2.jpg','/img/1.jpg','/img/g9.jpg'])
+const sliderPics = ref([
+    {src:'/img/2.jpg',desc:`Free shipping on all orders this weekend only. Use code: WEEKEND23`,btnTxt:`SHOP NOW`,btnType:`btn-outline-light`}
+    ,{src:'/img/1.jpg',desc:`Fresh styles for the season. `,btnTxt:`VIEW COLLECTION`,btnType:`btn-danger`}
+    ,{src:'/img/g9.jpg',desc:`Discover our exclusive summer lineup with 30% off for new customers`,btnTxt:`GET DEAL`,btnType:`btn-light`}
+
+])
 const featuredproducts = ref([
     {title:"Bamboo Toothbrush Set",tag:"Eco",tagMode:'dark',price:18.99,off: 12.99,category:"Bamboo Series",rate:4.9},
     {title:"Stainless Steel Bottle",tag:"New",tagMode:'primary',price:24.99,off:false,category:"Drinkware",rate:5},
