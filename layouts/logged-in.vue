@@ -27,34 +27,33 @@
           <!-- Glass Navigation -->
           <div class="  glass-nav" id="navbarNav">
             <div class="offcanvas-body h-100 d-flex flex-column flex-md-row">
+              <div class="ms-lg-4 mb-5 mb-md-0  bg-secondary bg-opacity-25 rounded rounded-4 text-white px-3 py-2">
+                Hi,
+                {{ loginStore.fulnamer }} !
+              </div>
               <ul class="navbar-nav ms-md-auto">
                 <li class="nav-item mx-2">
-                  <a class="nav-link px-3 py-2 position-relative" href="#">
+                  <NuxtLink class="nav-link px-3 py-2 position-relative" href="/">
                     <i class="bi bi-house-door me-1"></i> Home
                     <span class="nav-underline"></span>
-                  </a>
+                  </NuxtLink>
                 </li>
                 <li class="nav-item mx-2">
-                  <a class="nav-link px-3 py-2 position-relative" href="#">
+                  <NuxtLink class="nav-link px-3 py-2 position-relative" href="/products">
                     <i class="bi bi-box-seam"></i> Products
                     <span class="nav-underline"></span>
-                  </a>
+                  </NuxtLink>
                 </li>
                 <li class="nav-item mx-2">
-                  <a class="nav-link px-3 py-2 position-relative" href="#">
+                  <NuxtLink class="nav-link px-3 py-2 position-relative" href="/cart">
                     <i class="bi bi-cart"></i> cart
                     <span class="nav-underline"></span>
-                  </a>
+                  </NuxtLink>
                 </li>
 
               </ul>
 
 
-              <!-- <div class="ms-lg-4 mt-5 mt-lg-0 ">
-                <button class="btn btn-success px-4 py-2 rounded-pill shadow-lg hover-scale">
-                  <i class="bi bi-rocket me-1"></i> Log in
-                </button>
-              </div> -->
             </div>
           </div>
          
@@ -146,6 +145,13 @@
     </div>
   </footer>
 </template>
+<script setup>
+import { useLogin } from '~/store/useLogin';
+
+const loginStore = useLogin()
+console.log(loginStore);
+
+</script>
 <style scoped>
 
 .text-green {

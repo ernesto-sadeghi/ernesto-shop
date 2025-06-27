@@ -1,12 +1,12 @@
 <template>
       <div class="col-lg-3 col-md-4 col-sm-6 ">
                 <div class="card product-card h-100">
-                    <div class="position-relative">
-                        <img :src="product.image" class="card-img-top"
+                    <div class="position-relative d-flex justify-content-center">
+                        <img :src="product.image" class="card-img-top w-50 "
                             alt="Bamboo Product">
                         <span v-if="product.tag" class="product-badge badge " :class="'bg-'+product.tagMode">{{ product.tag }}</span>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column-reverse mb-4 ">
                         <div class="d-flex justify-content-between mb-2">
                             <span class="text-muted"><small>{{ product.category }}</small></span>
                             <div>
