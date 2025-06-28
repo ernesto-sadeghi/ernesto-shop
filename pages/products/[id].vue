@@ -46,15 +46,13 @@
                         </div>
                         
                         <!-- Add to Cart -->
-                        <div class="d-flex flex-wrap align-items-center mb-3">
-                            <!-- <div class="input-group me-3" style="width: 120px;">
-                                <button @click="cartStore.removeProduct(product)" class="btn btn-outline-secondary" type="button">-</button>
-                                <input type="text" class="form-control text-center" :value="cartStore">
-                                <button @click="cartStore.addProduct(product)" class="btn btn-outline-secondary" type="button">+</button>
-                            </div> -->
-                            <button @click="cartStore.addProduct(product)" class="btn btn-primary btn-lg flex-grow-1">
+                        <div class="d-flex flex-column align-items-center mb-3">
+                         
+                            <button :disabled="!shopStore.islogged" @click="shopStore.addProduct(product)" class="w-100 btn btn-primary btn-lg flex-grow-1">
                                 <i class="fas fa-shopping-cart me-2"></i>Add to Cart
                             </button>
+
+                            <p v-show="!shopStore.islogged" class="alert alert-danger text-center w-100 my-2">- you have to login first ! -</p>
                              <NuxtLink href="/products"  class="btn btn-outline-secondary w-100 mt-2">
                             <i class="bi bi-arrow-left"></i> Continue Shopping
                         </NuxtLink>
@@ -73,9 +71,9 @@
 </template>
 
 <script setup>
-import { useCart } from '~/store/useCart'
+import { useShopStore } from '~/store/useShopStore'
 
-const cartStore = useCart()
+const shopStore = useShopStore()
 const route = useRoute()
 const product = ref({})
 watchEffect(async () => {
@@ -88,6 +86,10 @@ console.log(product);
 </script>
 
 <style scoped>
+.btn:disabled{
+    background-color:#aaa !important ;
+    border: 2px solid #888;
+}
    .product-img {
             max-height: 500px;
             object-fit: contain;

@@ -57,17 +57,18 @@
 </template>
 
 <script setup>
-import { useLogin } from '~/store/useLogin';
+
+import { useShopStore } from '~/store/useShopStore';
 
 
 const data = reactive({firstname:'',lastname:"",adminstration:{isAdmin:false,adminPassword:''}})
-const loginStore = useLogin()
+const shopStore = useShopStore()
 
 function submit() {
-  console.log(data);
+
   
-  loginStore.logIn(data)
- loginStore.islogin? setPageLayout('logged-in'):setPageLayout('default')
+  shopStore.logIn(data)
+ shopStore.islogin? setPageLayout('logged-in'):setPageLayout('default')
 }
 </script>
 

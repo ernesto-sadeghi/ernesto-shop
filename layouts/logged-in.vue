@@ -28,8 +28,8 @@
           <div class="  glass-nav" id="navbarNav">
             <div class="offcanvas-body h-100 d-flex flex-column flex-md-row">
               <div class="ms-lg-4 mb-5 mb-md-0  bg-secondary bg-opacity-25 rounded rounded-4 text-white px-3 py-2">
-              <span v-show="loginStore.isadmin" class="badge text-bg-warning bg-opacity-100">Admin</span>  Hi,
-                {{ loginStore.fulnamer }} ! <button @click="loginStore.logout()" type="button" class="btn btn-sm rounded-pill mx-1 btn-outline-danger">Log out</button>
+              <span v-show="shopStore.isadmin" class="badge text-bg-warning bg-opacity-100">Admin</span>  Hi,
+                {{ shopStore.fulnamer }} ! <button @click="shopStore.logout()" type="button" class="btn btn-sm rounded-pill mx-1 btn-outline-danger">Log out</button>
               </div>
               <ul class="navbar-nav ms-md-auto">
                 <li class="nav-item mx-2">
@@ -51,7 +51,7 @@
                   </NuxtLink>
                 </li>
                 <li class="nav-item mx-2">
-                 <NuxtLink v-show="loginStore.isadmin" class="nav-link px-3 py-2 position-relative" href="/users">
+                 <NuxtLink v-show="shopStore.isadmin" class="nav-link px-3 py-2 position-relative" href="/users">
                     <i class="bi bi-people"></i> users
                     <span class="nav-underline"></span>
                   </NuxtLink>
@@ -152,10 +152,11 @@
   </footer>
 </template>
 <script setup>
-import { useLogin } from '~/store/useLogin';
 
-const loginStore = useLogin()
-console.log(loginStore);
+import { useShopStore } from '~/store/useShopStore';
+
+const shopStore = useShopStore()
+
 
 </script>
 <style scoped>

@@ -9,16 +9,18 @@
   </div>
 </template>
 <script setup>
-import { useLogin } from './store/useLogin';
+import { useShopStore } from './store/useShopStore';
 
-const loginStore = useLogin()
+
+
+const shopStore = useShopStore()
 onMounted(()=>{
-  loginStore.initializeLogin()
-   loginStore.islogged? setPageLayout('logged-in'):setPageLayout('default')
+  shopStore.initializeLogin()
+   shopStore.islogged? setPageLayout('logged-in'):setPageLayout('default')
 
 })
 
-const layout = computed(() => loginStore.islogged ? 'logged-in' : 'default');
+const layout = computed(() => shopStore.islogged ? 'logged-in' : 'default');
 
 </script>
 <style>

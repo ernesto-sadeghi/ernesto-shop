@@ -1,5 +1,5 @@
 <template>
-    <div v-if="!loginStore.islogged" class="container py-4 border border-2 rounded-3 my-5">
+    <div v-if="!shopStore.islogged" class="container py-4 border border-2 rounded-3 my-5">
         <h2 class="my-5 text-center">Your Shopping Cart :</h2>
         <div class="alert alert-danger text-center" role="alert">
   - you have to login first ! -
@@ -7,9 +7,9 @@
     </div>
     <div v-else class="container py-4 border border-2 rounded-3 my-5">
         <h2 class="mb-5 mx-2 text-center">Your Shopping Cart :</h2>
-        <h4 v-if="cartStore.products.length == 0 " class="text-center text-secondary m-5"> <i class="bi bi-cart-x"></i> - Your cart is empy .</h4>
+        <h4 v-if="shopStore.products.length == 0 " class="text-center text-secondary m-5"> <i class="bi bi-cart-x"></i> - Your cart is empy .</h4>
     
-        <div v-else v-for="prod in cartStore.products" :key="prod.id" class="card mb-3 shadow-sm">
+        <div v-else v-for="prod in shopStore.products" :key="prod.id" class="card mb-3 shadow-sm">
             <div class="row g-0">
                 <div class="col-md-2 p-2">
                     <img :src="prod.image" class="img-fluid rounded" alt="Product">
@@ -18,7 +18,7 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-between">
                             <h5 class="card-title ">{{ prod.title }}</h5>
-                            <button @click="cartStore.remover(prod)" class="btn btn-sm btn-outline-danger rounded-circle ">
+                            <button @click="shopStore.remover(prod)" class="btn btn-sm btn-outline-danger rounded-circle ">
                                 <i class="bi bi-x-lg"></i>
                             </button>
                         </div>
@@ -27,9 +27,9 @@
                         
                         <div class="d-flex align-items-center">
                             <div class="input-group" style="width: 130px;">
-                                <button @click="cartStore.removeProduct(prod)" class="btn btn-outline-secondary">-</button>
+                                <button @click="shopStore.removeProduct(prod)" class="btn btn-outline-secondary">-</button>
                                 <input  type="text" class="form-control text-center" :value="prod.quantity">
-                                <button @click="cartStore.addProduct(prod)" class="btn btn-outline-secondary">+</button>
+                                <button @click="shopStore.addProduct(prod)" class="btn btn-outline-secondary">+</button>
                             </div>
                             <div class="ms-4">
                                 <span class="fw-bold text-primary">${{ prod.price }}</span>
@@ -58,7 +58,7 @@
                     </div>
                     <div class="card-body">
                         <div class="d-flex justify-content-between mb-2">
-                            <span>Subtotal ({{ cartStore.products.length }} items) :</span>
+                            <span>Subtotal ({{ shopStore.products.length }} items) :</span>
                             <span>${{ toto.toFixed(2) }}</span>
                         </div>
                         <div class="d-flex justify-content-between mb-2">
@@ -88,16 +88,16 @@
 </template>
 
 <script setup>
-import { useCart } from '~/store/useCart'
-import { useLogin } from '~/store/useLogin'
+import { useShopStore } from '~/store/useShopStore';
 
-const cartStore = useCart()
-const loginStore = useLogin()
+
+const shopStore = useShopStore()
 onMounted(() => {
-  cartStore.initializeCart()
+  shopStore.initializeCart()
 })
-let toto= computed(()=> cartStore.totalPrice)
-console.log(cartStore);
+let toto= computed(()=> shopStore.totalPrice)
+
+
 
 </script>
 
