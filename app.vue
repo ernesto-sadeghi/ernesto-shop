@@ -2,7 +2,7 @@
   <div>
     <NuxtRouteAnnouncer />
     
-    <NuxtLayout >
+    <NuxtLayout :name="layout">
       <NuxtLoadingIndicator />
       <NuxtPage></NuxtPage>
     </NuxtLayout>
@@ -12,11 +12,14 @@
 import { useLogin } from './store/useLogin';
 
 const loginStore = useLogin()
-
-watchEffect(()=>{
+onMounted(()=>{
   loginStore.initializeLogin()
-   loginStore.islogin? setPageLayout('logged-in'):setPageLayout('default')
+   loginStore.islogged? setPageLayout('logged-in'):setPageLayout('default')
+
 })
+
+const layout = computed(() => loginStore.islogged ? 'logged-in' : 'default');
+
 </script>
 <style>
 body{

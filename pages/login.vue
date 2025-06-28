@@ -64,7 +64,9 @@ const data = reactive({firstname:'',lastname:"",adminstration:{isAdmin:false,adm
 const loginStore = useLogin()
 
 function submit() {
-  loginStore.login(data)
+  console.log(data);
+  
+  loginStore.logIn(data)
  loginStore.islogin? setPageLayout('logged-in'):setPageLayout('default')
 }
 </script>

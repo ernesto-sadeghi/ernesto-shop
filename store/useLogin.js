@@ -8,6 +8,20 @@ export const useLogin = defineStore('useLogin', {
 fulnamer:(state)=>{
   return state.login.firstname +" "+ state.login.lastname
 }
+,
+islogged:(state)=>{
+return state.islogin
+}
+,isadmin:(state)=>{
+  if( state.login.adminstration.isAdmin){
+  let result = state.login.adminstration.adminPassword =='123'?true:false
+  return result
+}else{
+    return false
+
+  }
+
+}
   },
 
   actions: {
@@ -23,14 +37,14 @@ fulnamer:(state)=>{
         this.islogin = cookie2.value
       }
     },
-    login(data) {
+    logIn(data) {
  
 
       this.login = data
       this.islogin = true
       this.saveLoginToCookie()
     },
-
+    
     saveLoginToCookie() {
       const cookie = useCookie('login', {
         maxAge: 60 * 60 * 24 * 7, // 1 week
@@ -42,7 +56,12 @@ fulnamer:(state)=>{
       })
       cookie.value = JSON.stringify(this.login)
       cookie2.value = JSON.stringify(this.islogin)
-    },
+    },logout(){
+      this.login=null
+      this.islogin=false
+      this.saveLoginToCookie()
+    }
+  
 
   }
 })
