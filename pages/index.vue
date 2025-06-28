@@ -64,7 +64,9 @@
 </template>
 
 <script setup>
-
+useHead({
+  titleTemplate:`%s - Home🏠`
+})
 const sliderPics = ref([
     {src:'/img/2.jpg',desc:`Free shipping on all orders this weekend only. Use code: WEEKEND23`,btnTxt:`SHOP NOW`,btnType:`btn-outline-light`}
     ,{src:'/img/1.jpg',desc:`Fresh styles for the season. `,btnTxt:`VIEW COLLECTION`,btnType:`btn-danger`}

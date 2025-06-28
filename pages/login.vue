@@ -57,7 +57,9 @@
 </template>
 
 <script setup>
-
+useHead({
+  titleTemplate:`%s - log in`
+})
 import { useShopStore } from '~/store/useShopStore';
 
 

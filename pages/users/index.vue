@@ -54,7 +54,9 @@
 </template>
 
 <script setup>
-
+useHead({
+  titleTemplate:`%s - usersPage`
+})
 const url = computed(() => `https://fakestoreapi.com/users`)
 
 const { data: users, pending, error, refresh } = await useAsyncData("users", () => $fetch(url.value),

@@ -14,6 +14,9 @@
 </template>
 
 <script setup>
+useHead({
+  titleTemplate:`%s - Products`
+})
 const url = computed(() => `https://fakestoreapi.com/products`)
 
 const { data: products, pending, error, refresh } = await useAsyncData("products", () => $fetch(url.value),

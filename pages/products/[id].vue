@@ -88,18 +88,22 @@ const isload = ref(false)
 watchEffect(async () => {
     const url = `https://fakestoreapi.com/products/${route.params.id}`
     await $fetch(url)
-        .then(data => {
-            isload.value = true
-            console.log(data);
-
-            if (!data) {
-
-                throw createError({ statusCode: 404, statusMessage: "notFound :(", fatal: true })
-            }
-        })
-
+    .then(data => {
+        isload.value = true
+        product.value = data
+        // console.log(data);
+        
+        if (!data) {
+            
+            throw createError({ statusCode: 404, statusMessage: "notFound :(", fatal: true })
+        }
+    })
+    
 })
 
+useHead({
+  titleTemplate:`%s Product #${route.params.id}`
+})
 
 </script>
 

@@ -88,6 +88,9 @@
 </template>
 
 <script setup>
+useHead({
+  titleTemplate:`%s - Cart🛒`
+})
 import { useShopStore } from '~/store/useShopStore';
 
 

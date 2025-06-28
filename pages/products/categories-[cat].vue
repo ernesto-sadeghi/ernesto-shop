@@ -17,7 +17,9 @@
 </template>
 
 <script setup>
-
+useHead({
+  titleTemplate:`%s - Product categories`
+})
 const route = useRoute()
 
 // const url = computed(() => `https://fakestoreapi.com/products/category/${route.params.cat}`)
