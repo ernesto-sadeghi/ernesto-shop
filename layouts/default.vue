@@ -260,7 +260,7 @@
 .nav-link:hover .nav-underline {
   width: 100%;
 }
-.router-link-exact-active{
+.router-link-exact-active .nav-underline{
   width: 100%;
 
 }
