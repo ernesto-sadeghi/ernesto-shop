@@ -17,6 +17,13 @@ An e-commerce platform with tiered access control built with Nuxt.js, Pinia, and
 - **Product Catalog**: View all available products
 - **Shopping Cart**: Add/remove items (for logged-in users)
 
+
+## Access Levels
+Feature |	Guest |	User |	Admin
+View |products |✅	| ✅ |	✅
+Add to cart	| ❌	| ✅	| ✅
+Checkout	| ❌ |	✅ |	✅
+User management	| ❌ |	❌ |	✅
 ## Installation
 
 1. Clone the repository:
