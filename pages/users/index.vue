@@ -1,5 +1,10 @@
 <template>
-    <div class="container">
+        <div v-if="pending" class="container p-5 m-5 d-flex justify-content-center">
+        <div class="spinner-border text-success" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    <div v-else class="container">
         <div class="row g-4">
 
             <div v-for="u, i in users" :key="i" class="col-md-6 col-lg-4">

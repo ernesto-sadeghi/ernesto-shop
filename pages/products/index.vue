@@ -1,5 +1,10 @@
 <template>
-  <div class="container-fluid px-5 my-5">
+      <div v-if="pending || pending2" class="container p-5 m-5 d-flex justify-content-center">
+        <div class="spinner-border text-success" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+  <div v-else class="container-fluid px-5 my-5">
     <div class="row g-5">
 
       <Product v-for="product in products" :key="product.id" :product="product"></Product>
