@@ -7,7 +7,15 @@ export default defineNuxtConfig({
       'bootstrap/dist/css/bootstrap.min.css','bootstrap-icons/font/bootstrap-icons.css'
     ],app:{
       head:{
+          link: [
+      { rel: 'icon', type: 'image/png', href: '/icon.png' }
+    ],
         title:"🦖ERNESTO =>"
+       ,meta:[
+        {name:"author",content:"https://github.com/ernesto-sadeghi"},
+        {name:"description",content:"shop project with nuxt"},
+        
+       ] 
       }
     }
     ,
