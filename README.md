@@ -1,75 +1,25 @@
-# Nuxt Minimal Starter
+# Ernesto-Shop
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+![Nuxt.js](https://img.shields.io/badge/Nuxt.js-00C58E?style=for-the-badge&logo=nuxt.js&logoColor=white)
+![Pinia](https://img.shields.io/badge/Pinia-FFD02F?style=for-the-badge&logo=pinia&logoColor=000)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-## Setup
+An e-commerce platform with tiered access control built with Nuxt.js, Pinia, and Bootstrap.
 
-Make sure to install dependencies:
+## Features
 
-```bash
-# npm
-npm install
+- **Three Access Levels**:
+  - Guest users: Browse products
+  - Authenticated users: Add to cart
+  - Admin users: Full access + user management
+- **Responsive Design**: Built with Bootstrap 5
+- **State Management**: Powered by Pinia
+- **Product Catalog**: View all available products
+- **Shopping Cart**: Add/remove items (for logged-in users)
 
-# pnpm
-pnpm install
+## Installation
 
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/ernesto-shop.git
+   cd ernesto-shop
