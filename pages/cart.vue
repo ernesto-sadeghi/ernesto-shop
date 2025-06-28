@@ -1,7 +1,12 @@
 <template>
-  
-    <div class="container py-4">
-        <h2 class="mb-4">Your Shopping Cart</h2>
+    <div v-if="!loginStore.islogged" class="container py-4 border border-2 rounded-3 my-5">
+        <h2 class="my-5 text-center">Your Shopping Cart :</h2>
+        <div class="alert alert-danger text-center" role="alert">
+  - you have to login first ! -
+</div>
+    </div>
+    <div v-else class="container py-4 border border-2 rounded-3 my-5">
+        <h2 class="mb-5 mx-2 text-center">Your Shopping Cart :</h2>
         <h4 v-if="cartStore.products.length == 0 " class="text-center text-secondary m-5"> <i class="bi bi-cart-x"></i> - Your cart is empy .</h4>
     
         <div v-else v-for="prod in cartStore.products" :key="prod.id" class="card mb-3 shadow-sm">
@@ -84,8 +89,10 @@
 
 <script setup>
 import { useCart } from '~/store/useCart'
+import { useLogin } from '~/store/useLogin'
 
 const cartStore = useCart()
+const loginStore = useLogin()
 onMounted(() => {
   cartStore.initializeCart()
 })

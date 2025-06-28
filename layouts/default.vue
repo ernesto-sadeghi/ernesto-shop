@@ -260,6 +260,10 @@
 .nav-link:hover .nav-underline {
   width: 100%;
 }
+.router-link-exact-active{
+  width: 100%;
+
+}
 
 @media only screen and (max-width: 700px) {
   .glassy {
