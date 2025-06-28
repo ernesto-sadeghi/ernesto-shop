@@ -78,9 +78,17 @@ const route = useRoute()
 const product = ref({})
 watchEffect(async () => {
   const url = `https://fakestoreapi.com/products/${route.params.id}`
-  product.value = await $fetch(url)
+  await $fetch(url)
+  .then(data=>{
+      console.log(data);
+      product.value =data 
+    if(!data){
+
+        throw createError({statusCode:404,statusMessage:"notFound :(",fatal:true})
+    }
+  })
+
 })
-console.log(product);
 
 
 </script>
