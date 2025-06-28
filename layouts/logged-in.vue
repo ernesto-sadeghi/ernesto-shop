@@ -51,7 +51,7 @@
                   </NuxtLink>
                 </li>
                 <li class="nav-item mx-2">
-                 <NuxtLink v-show="shopStore.isadmin" class="nav-link px-3 py-2 position-relative" href="/users">
+                 <NuxtLink v-show="shopStore.isadmin" class="nav-link px-3 py-2 position-relative" :href="'/users/'+shopStore.adminPass">
                     <i class="bi bi-people"></i> users
                     <span class="nav-underline"></span>
                   </NuxtLink>

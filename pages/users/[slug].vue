@@ -54,6 +54,9 @@
 </template>
 
 <script setup>
+definePageMeta({
+  middleware: "checker"
+})
 useHead({
   titleTemplate:`%s - usersPage`
 })

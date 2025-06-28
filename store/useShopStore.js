@@ -19,7 +19,15 @@ export const useShopStore = defineStore('useShopStore', {
 
             }
 
-        }, totalPrice: (state) => {
+        }
+        , adminPass: (state) => {
+            return state.login.adminstration.adminPassword? state.login.adminstration.adminPassword :false
+
+            }
+
+        
+        
+        , totalPrice: (state) => {
             let total = 0;
             for (let prod of state.products) {
 

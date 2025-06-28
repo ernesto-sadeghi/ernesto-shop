@@ -11,7 +11,7 @@
             </div>
             
             <!-- Glitch Message -->
-            <p class="error-message">I DON'T EXPECT TO SEE YOU HERE</p>
+            <p class="error-message">I DIDN'T EXPECT TO SEE YOU HERE</p>
             <p class="error-message"> {{ error.statusCode }} : {{ error.message }}</p>
             
             <!-- Cyber Button -->
