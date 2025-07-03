@@ -27,6 +27,9 @@ An e-commerce platform with tiered access control built with Nuxt.js, Pinia, and
 | Checkout           | ❌    | ✅   | ✅    |
 | User management    | ❌    | ❌   | ✅    |
 
+## If you want to see it on host :
+**https://ernestoshop.liara.run**
+
 ## Installation
 
 1. Clone the repository:
