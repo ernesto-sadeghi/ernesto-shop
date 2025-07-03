@@ -173,7 +173,9 @@
   /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.222); */
 
 }
-
+.offcanvas.offcanvas-start{
+  width: 230px;
+}
 /* Floating Animation */
 .animate-float {
   animation: float 6s ease-in-out infinite;
