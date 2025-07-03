@@ -1,7 +1,7 @@
 <template>
   <header class="sticky-top">
-    <nav class="navbar glassy navbar-expand-lg navbar-dark py-3">
-      <div class="container">
+    <nav class="navbar glassy navbar-expand-lg navbar-dark py-3 d-flex justify-content-center">
+      <div class="container mx-0 ">
         <!-- Animated Logo -->
         <a class="navbar-brand fw-bold fs-3" href="https://github.com/ernesto-sadeghi"
           style="text-shadow: 0 0 1px #00c661;">
@@ -26,11 +26,11 @@
 
           <!-- Glass Navigation -->
           <div class="  glass-nav" id="navbarNav">
-            <div class="offcanvas-body h-100 d-flex flex-column flex-md-row">
-              <div class="ms-lg-4 mb-5 mb-md-0  bg-secondary bg-opacity-25 rounded rounded-4 text-white px-3 py-2">
-              <span v-show="shopStore.isadmin" class="badge text-bg-warning bg-opacity-100">Admin</span>  Hi,
-                {{ shopStore.fulnamer }} ! <button @click="shopStore.logout()" type="button" class="btn btn-sm rounded-pill mx-1 btn-outline-danger">Log out</button>
-              </div>
+             <div class="offcanvas-body h-100 d-flex flex-column flex-md-row justify-content-between">
+              <div class="ms-lg-4 mb-5 mb-md-0  bg-secondary bg-opacity-25 rounded rounded-4 text-white px-3 py-2 d-flex flex-column flex-md-row ">
+              <span v-show="shopStore.isadmin" class="badge text-bg-warning bg-opacity-100 pt-2 my-3 my-md-0 mx-2">Admin</span>  Hi,
+                {{ shopStore.fulnamer }} ! <button @click="shopStore.logout()" type="button" class=" my-3 my-md-0 mx-2 btn btn-sm rounded-pill mx-1 btn-outline-danger">Log out</button>
+      </div>
               <ul class="navbar-nav ms-md-auto">
                 <li class="nav-item mx-2">
                   <NuxtLink class="nav-link px-3 py-2 position-relative" href="/">
@@ -235,7 +235,9 @@ const shopStore = useShopStore()
   bottom: -100px;
   left: -100px;
 }
-
+.offcanvas.offcanvas-start{
+  width: 230px;
+}
 /* Hover Effects */
 .hover-scale {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
